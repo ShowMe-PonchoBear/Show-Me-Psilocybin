@@ -72,9 +72,8 @@
       background-color: #555;
     }
 
-    /* Drop-down menu */
     .dropdown-content {
-      display: none;
+      display: none !important;
       position: absolute;
       top: 100%;
       left: 0;
@@ -90,7 +89,7 @@
     }
 
     .dropdown.active .dropdown-content {
-      display: block;
+      display: block !important;
     }
 
     main {
@@ -151,21 +150,22 @@
   </footer>
 
   <script>
-    const dropdown = document.getElementById('moreDropdown');
-    const moreButton = document.getElementById('moreButton');
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdown = document.getElementById('moreDropdown');
+      const moreButton = document.getElementById('moreButton');
 
-    moreButton.addEventListener('click', (event) => {
-      event.stopPropagation(); // Don't let this click bubble to body
-      dropdown.classList.toggle('active');
-    });
+      moreButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+      });
 
-    document.body.addEventListener('click', () => {
-      dropdown.classList.remove('active');
-    });
+      document.body.addEventListener('click', function () {
+        dropdown.classList.remove('active');
+      });
 
-    // Prevent menu from closing when clicking inside it
-    dropdown.querySelector('.dropdown-content').addEventListener('click', (e) => {
-      e.stopPropagation();
+      dropdown.querySelector('.dropdown-content').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
     });
   </script>
 </body>
