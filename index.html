@@ -73,7 +73,7 @@
     }
 
     nav.main-nav ul li a.active {
-      background-color: ##0ef7f3;
+      background-color: #0ef7f3; /* ✅ FIXED here */
       color: #2e0a6b;
       font-weight: bold;
     }
@@ -120,46 +120,45 @@
     }
 
     /* ✅ MOBILE STYLE ONLY */
-    /* ✅ MOBILE STYLE ONLY */
-@media (max-width: 768px) {
-  nav.main-nav ul {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    @media (max-width: 768px) {
+      nav.main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-  nav.main-nav ul li {
-    flex: 1 1 auto;
-    text-align: center;
-  }
+      nav.main-nav ul li {
+        flex: 1 1 auto;
+        text-align: center;
+      }
 
-  nav.main-nav ul li a {
-    padding: 10px;
-    font-size: 0.95em;
-  }
+      nav.main-nav ul li a {
+        padding: 10px;
+        font-size: 0.95em;
+      }
 
-  .desktop-only {
-    display: none;
-  }
+      .desktop-only {
+        display: none;
+      }
 
-  .mobile-only {
-    display: block;
-  }
+      .mobile-only {
+        display: block;
+      }
 
-  .login-signup {
-    position: static;
-    margin: 10px auto;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+      .login-signup {
+        position: static;
+        margin: 10px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-  .login-signup a {
-    font-size: 1em;
-    padding: 10px 16px;
-  }
+      .login-signup a {
+        font-size: 1em;
+        padding: 10px 16px;
+      }
 
-  header {
-    padding-bottom: 0;
+      header {
+        padding-bottom: 0;
       }
     }
   </style>
