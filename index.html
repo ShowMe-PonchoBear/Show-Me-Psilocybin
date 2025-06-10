@@ -1,165 +1,172 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Show-Me Psilocybin</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #2f2f2f;
-        color: #eee;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show-Me Psilocybin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2f2f2f;
+      color: #eee;
+    }
 
-      header {
-        background-color: #0ef7f3;
-        padding: 20px;
-        text-align: center;
-      }
+    header {
+      background-color: #0ef7f3;
+      padding: 20px;
+      text-align: center;
+    }
 
-      h1 {
-        margin: 0;
-        color: #2e0a6b;
-      }
+    h1 {
+      margin: 0;
+      color: #2e0a6b;
+    }
 
-      .login-signup {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        display: flex;
-        gap: 10px;
-      }
+    .login-signup {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
 
-      .login-signup a {
-        background-color: #fff;
-        color: #2e0a6b;
-        padding: 8px 12px;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 0.9em;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      }
+    .login-signup a {
+      background-color: #fff;
+      color: #2e0a6b;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.9em;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
 
-      .login-signup a:hover {
-        background-color: #e0e0e0;
-      }
+    .login-signup a:hover {
+      background-color: #e0e0e0;
+    }
 
-      nav.main-nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: #333;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    nav.main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-      nav.main-nav ul li {
-        position: relative;
-      }
+    nav.main-nav ul li {
+      position: relative;
+    }
 
-      nav.main-nav ul li a {
-        display: block;
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        cursor: pointer;
-      }
+    nav.main-nav ul li a {
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-      nav.main-nav ul li a:hover {
-        background-color: #555;
-      }
+    nav.main-nav ul li a:hover {
+      background-color: #555;
+    }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #444;
-        min-width: 160px;
-        z-index: 1;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
+    /* Drop-down menu */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
 
-      .dropdown-content li a {
-        padding: 10px 16px;
-        display: block;
-      }
+    .dropdown-content li a {
+      padding: 10px 16px;
+      display: block;
+    }
 
-      .dropdown.active .dropdown-content {
-        display: block;
-      }
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
 
-      main {
-        padding: 30px;
-        text-align: center;
-      }
+    main {
+      padding: 30px;
+      text-align: center;
+    }
 
-      footer {
-        background-color: #0ef7f3;
-        padding: 10px;
-        text-align: center;
-        font-size: 0.9em;
-        color: #2e0a6b;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="login-signup">
-      <a href="#">Login</a>
-      <a href="#">Signup</a>
-    </div>
+    footer {
+      background-color: #0ef7f3;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #2e0a6b;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-signup">
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+  </div>
 
-    <header>
-      <h1>SHOW-ME Psilocybin</h1>
-    </header>
+  <header>
+    <h1>SHOW-ME Psilocybin</h1>
+  </header>
 
-    <nav class="main-nav">
-      <ul>
-        <li class="dropdown" id="moreDropdown">
-          <a id="moreButton">More</a>
-          <ul class="dropdown-content">
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Get Involved</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Education</a></li>
-        <li><a href="#">Initiative</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </nav>
+  <nav class="main-nav">
+    <ul>
+      <li class="dropdown" id="moreDropdown">
+        <a id="moreButton">More</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Get Involved</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Initiative</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
 
-    <main>
-      <p>Welcome to the early foundation of Missouri’s psilocybin future.</p>
-      <p>This site is under construction as we prepare to advocate for the legalization and therapeutic use of psilocybin mushrooms across the state.</p>
-      <p><a href="about.html" style="color: #0ef7f3;">Learn more about our mission →</a></p>
-    </main>
+  <main>
+    <p>Welcome to the early foundation of Missouri’s psilocybin future.</p>
+    <p>This site is under construction as we prepare to advocate for the legalization and therapeutic use of psilocybin mushrooms across the state.</p>
+    <p><a href="about.html" style="color: #0ef7f3;">Learn more about our mission →</a></p>
+  </main>
 
-    <footer>
-      <p>© 2025 SHOW-ME Psilocybin. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 SHOW-ME Psilocybin. All rights reserved.</p>
+  </footer>
 
-    <script>
-      // JavaScript for click-to-toggle dropdown
-      const dropdown = document.getElementById("moreDropdown");
-      const button = document.getElementById("moreButton");
+  <script>
+    const dropdown = document.getElementById('moreDropdown');
+    const moreButton = document.getElementById('moreButton');
 
-      button.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent body click from closing it immediately
-        dropdown.classList.toggle("active");
-      });
+    moreButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Don't let this click bubble to body
+      dropdown.classList.toggle('active');
+    });
 
-      document.body.addEventListener("click", () => {
-        dropdown.classList.remove("active");
-      });
-    </script>
-  </body>
+    document.body.addEventListener('click', () => {
+      dropdown.classList.remove('active');
+    });
+
+    // Prevent menu from closing when clicking inside it
+    dropdown.querySelector('.dropdown-content').addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+</body>
 </html>
