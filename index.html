@@ -63,6 +63,7 @@
         color: white;
         padding: 14px 20px;
         text-decoration: none;
+        cursor: pointer;
       }
 
       nav.main-nav ul li a:hover {
@@ -80,16 +81,12 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
-      .dropdown-content li {
-        width: 100%;
-      }
-
       .dropdown-content li a {
         padding: 10px 16px;
         display: block;
       }
 
-      .dropdown:hover .dropdown-content {
+      .dropdown.active .dropdown-content {
         display: block;
       }
 
@@ -119,8 +116,8 @@
 
     <nav class="main-nav">
       <ul>
-        <li class="dropdown">
-          <a href="#">More</a>
+        <li class="dropdown" id="moreDropdown">
+          <a id="moreButton">More</a>
           <ul class="dropdown-content">
             <li><a href="#">Contact</a></li>
             <li><a href="#">Community</a></li>
@@ -149,5 +146,20 @@
     <footer>
       <p>© 2025 SHOW-ME Psilocybin. All rights reserved.</p>
     </footer>
+
+    <script>
+      // JavaScript for click-to-toggle dropdown
+      const dropdown = document.getElementById("moreDropdown");
+      const button = document.getElementById("moreButton");
+
+      button.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent body click from closing it immediately
+        dropdown.classList.toggle("active");
+      });
+
+      document.body.addEventListener("click", () => {
+        dropdown.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
